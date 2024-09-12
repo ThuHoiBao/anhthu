@@ -12,33 +12,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #fff; /* Màu chữ trắng */
-}
-/* === Header === */
-.navbar__link a {
-  color: #fff; /* Màu chữ trắng */
-}
-
-.navbar__btn {
-  background-color: var(--green); /* Nền nút, bạn có thể thay đổi nếu muốn */
-}
-
-/* === Banner === */
-.banner__heading h1 {
-  color: #fff; /* Màu chữ trắng */
-}
-
-.banner__heading p {
-  color: #fff; /* Màu chữ trắng */
-}
-
-/* === Footer === */
-.footer__heading {
-  color: #fff; /* Màu chữ trắng */
-}
-
-.footer__contact a {
-  color: #fff; /* Màu chữ trắng */
 }
 
 img {
@@ -56,10 +29,10 @@ img {
 button {
   text-align: center;
   color: #fff;
-  background-color: var(--blue);
+  background-color: var(--gray);
   padding: 0.8rem 2.5rem;
   border: none;
-  border-radius: 100px;
+  border-radius: 10px;
   cursor: pointer;
   transition: var(--smooth);
 }
@@ -73,7 +46,6 @@ button:hover {
   --green: #54b192;
   --green-l: #a4cec0;
   --gray: #3f3d56;
-  --blue:#0B2F9F;
   --smooth: all 0.3s ease-in;
 }
 /* === Overlay === */
@@ -96,6 +68,13 @@ button:hover {
 header {
   position: absolute;
   width: 100%;
+  
+}
+.navbar__logo img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .navbar {
@@ -104,15 +83,12 @@ header {
   align-items: center;
   padding: 20px 0;
 }
-
-/* logo */
-.navbar__logo img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
+@media (max-width: 480px){
+  .navbar__logo img {
+    width: 80px;
+    height: 80px;
+  }
 }
-
 /* menu */
 .navbar__links {
   position: fixed;
@@ -120,7 +96,7 @@ header {
   left: 0;
   width: 60%;
   height: 100%;
-  background-color: var(--blue);
+  background-color: var(--gray);
   z-index: 5;
   transition: var(--smooth);
   transform: translateX(-100%);
@@ -155,7 +131,11 @@ header {
   background-color: var(--green);
   margin-left: 45px;
 }
-
+.navbar {
+  padding: 0; /* Xóa padding nếu có */
+  margin: 0; /* Xóa margin nếu có */
+  /* Đảm bảo các phần tử chứa không có khoảng cách không cần thiết */
+}
 /* menu button */
 .navbar__icons {
   display: flex;
@@ -171,7 +151,7 @@ header {
 .navbar__icon {
   width: 45px;
   height: 6px;
-  background-color: var(--blue);
+  background-color: var(--gray);
   border-radius: 5px;
   transition: var(--smooth);
   position: relative;
@@ -220,43 +200,45 @@ header {
     align-items: center;
   }
   .navbar__link a {
-    color: var(--blue);
+    color: var(--gray);
   }
   .navbar__icons {
     display: none;
   }
   .navbar__btn {
-    background-color: var(--blue);
+    background-color: var(--gray);
   }
 }
 
 /* === Banner === */
-/* === Banner === */
+/* Section setup */
 #banner {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* Chiều cao của section bằng 100% chiều cao của viewport */
   display: flex;
-  align-items: center;
-  overflow: hidden; /* Đảm bảo không có cuộn khi ảnh lớn hơn */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  overflow: hidden; /* Đảm bảo không có thanh cuộn */
 }
 
+/* Banner image container setup */
 .banner__img {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100vw; /* Đảm bảo ảnh phủ toàn bộ chiều rộng của viewport */
-  height: 100vh; /* Đảm bảo ảnh phủ toàn bộ chiều cao của viewport */
-  object-fit: cover; /* Đảm bảo ảnh giữ tỉ lệ và phủ toàn bộ khu vực */
-  z-index: -1; /* Đặt ảnh phía dưới nội dung khác */
+  right: 0;
+  height: 100%; 
+  overflow: hidden;
+  width: auto; 
 }
 
+
+
+
 .banner__heading {
-  position: relative; /* Đảm bảo tiêu đề nằm trên ảnh nền */
-  z-index: 1; /* Đảm bảo tiêu đề nằm trên ảnh nền */
-  max-width: 600px; /* Tùy chỉnh kích thước tối đa cho tiêu đề */
+  max-width: 300px;
   margin: 0 auto;
   text-align: center;
-  color: var(--blue);
+  color: var(--gray);
 }
 
 .banner__heading h1 {
@@ -279,11 +261,11 @@ header {
   margin-top: 3em;
   display: flex;
   justify-content: space-evenly;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .banner__socials a {
-  color: #fff;
+  color: var(--gray);
   transition: var(--smooth);
 }
 
@@ -305,70 +287,73 @@ header {
     margin-right: 45px;
   }
   .banner__img {
-    width: 100vw; /* Đảm bảo ảnh phủ toàn bộ chiều rộng của viewport */
+    width: 60%;
   }
 }
 
-
 /* === Works === */
 #works {
-  padding-top: 10em;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* === Works === */
-/* === Works === */
-#works {
-  position: relative;
-  width: 100%;
-  padding-top: 5em; /* Khoảng cách từ trên để phù hợp với tiêu đề và ảnh */
-  min-height: 100vh; /* Đảm bảo phần này ít nhất là chiều cao của viewport */
-  overflow: hidden; /* Đảm bảo không có cuộn khi ảnh lớn hơn */
-}
-
-.banner__img {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Đảm bảo ảnh phủ toàn bộ chiều rộng của section */
-  height: 100%; /* Đảm bảo ảnh phủ toàn bộ chiều cao của section */
-  object-fit: cover; /* Đảm bảo ảnh giữ tỉ lệ và phủ toàn bộ khu vực */
-  z-index: -1; /* Đặt ảnh phía dưới nội dung khác */
+  padding-top: 1em;
+  position: relative;
+  height: 100vh; /* Chiều cao của section bằng 100% chiều cao của viewport */
+  overflow: hidden; /* Đảm bảo không có thanh cuộn */
 }
 
 #works h2 {
-  color: black;
-  text-align: left;
-  font-size: 2.5rem;
-  margin-left: 1em;
-  position: relative; /* Đảm bảo tiêu đề nằm trên ảnh nền */
-  z-index: 1; /* Đảm bảo tiêu đề nằm trên ảnh nền */
+  text-align: center;
+  color: var(--gray);
 }
 
-.works__btn {
+.works__dec {
   position: absolute;
-  bottom: 1em; /* Khoảng cách từ dưới cùng của phần */
-  width: 100%; /* Đảm bảo nút nằm trên toàn bộ chiều rộng của phần */
-  text-align: center; /* Căn giữa nút */
+  top: 0;
+  left: 0;
+  transform: translateX(-60%);
+  z-index: -1;
+}
+.works__dec:nth-child(2) {
+  position: absolute;
+  top: initial;
+  left: initial;
+  bottom: 15%;
+  right: 0;
+  transform: translateX(60%);
+  z-index: -1;
 }
 
-.works__btn button {
-  font-size: 1rem;
+.works__img--single {
+  margin: 2em 0;
 }
+
+.works__img--single:nth-child(odd) {
+  padding-top: 5em;
+}
+
+.works__img--single:nth-child(3) {
+  margin-top: -5em;
+}
+
+
 
 @media (min-width: 62em) {
+  #works h2 {
+    margin-bottom: 3em;
+  }
   .works__img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   .works__img--single {
-    margin: 0 2em; /* Điều chỉnh khoảng cách giữa các ảnh */
-    width: 30%; /* Điều chỉnh kích thước của ảnh */
+    margin: 0 5em;
+    width: 35%;
+  }
+  .works__img--single:nth-child(3) {
+    margin-top: 0;
   }
 }
-
 
 /* === Footer === */
 #footer {
@@ -391,7 +376,7 @@ header {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
-  color: #fff;
+  color: var(--gray);
 }
 
 .footer__contact {
@@ -402,7 +387,7 @@ header {
 
 .footer__contact a {
   text-decoration: none;
-  color: #fff;
+  color: var(--gray);
 }
 
 .footer__dec {
