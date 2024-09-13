@@ -27,13 +27,15 @@ document.getElementById('works-combobox').addEventListener('change', function() 
   var workImage = document.getElementById('work-image');
   var workDescription = document.getElementById('work-description');
 
-  if (selectedValue === 'murarch') {
+  if (selectedValue === 'email') {
+    workImage.src = './img/email.jpg';
+    workDescription.innerHTML = '<a href="https://emaillist-ubhj.onrender.com/" target="_blank">Email List</a>';
+  }
+  else if (selectedValue === 'murarch') {
     workImage.src = './img/murarch.jpg';
-    workDescription.innerHTML = '<a href="https://emailhostingweb.onrender.com/" target="_blank">Murarch</a>';
-  } else if (selectedValue === 'Weak 4') {
-    workImage.src = './img/logo.jpg';
-    workDescription.innerHTML = '<a href="https://www.facebook.com/profile.php?id=100026084804516&locale=vi_VN" target="_blank">Weak 4</a>';
-  } else if (selectedValue === 'exer') {
+    workDescription.innerHTML = '<a href="https://emailhostingweb.onrender.com/" target="_blank">Murach Survey</a>';
+  }
+  else if (selectedValue === 'exer') {
     workImage.src = './img/baitap.jpg';
     workDescription.innerHTML = '<a  target="_blank">Exercises</a>';
     

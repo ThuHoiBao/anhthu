@@ -301,7 +301,6 @@ header {
 #works h2 {
   text-align: center;
   color: black;
-  
 }
 
 .combobox {
@@ -332,11 +331,16 @@ header {
   display: block;
   font-size: 1.2rem;
   color: #333;
-  text-decoration: none; /* Xóa gạch chân của liên kết */
 }
 
-#work-description:hover {
-  text-decoration: underline; /* Hiển thị gạch chân khi di chuột qua liên kết */
+#work-description a {
+  text-decoration: none; 
+  color: #333; 
+}
+
+#work-description a:hover {
+  text-decoration: underline; 
+  color: green; 
 }
 
 
