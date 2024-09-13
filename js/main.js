@@ -26,6 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var typed = new Typed(".text3", {
+    strings: ["Exercise List"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+  });
+});
 overlay.addEventListener("click", () => {
   menu.classList.toggle("navbar__open");
   menuButton.classList.toggle("open");

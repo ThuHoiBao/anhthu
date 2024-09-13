@@ -511,4 +511,21 @@ header {
     display: flex;
     justify-content: space-between;
   }
+  @media (max-width: 62em) {
+    .banner__socials {
+      font-size: 1.8rem; /* Kích thước tiêu đề trên điện thoại */
+      text-align: center; /* Căn giữa nội dung */
+      margin: 1em; /* Khoảng cách lề */
+      padding-top: 0; /* Padding top bằng 0 */
+      z-index: 1; /* Đảm bảo nó nằm trên cùng */
+    }
+  
+    .banner__socials p {
+      font-size: 1rem; /* Kích thước đoạn văn trên điện thoại */
+      margin-bottom: 1.5em; /* Khoảng cách dưới đoạn văn */
+      z-index: 1; 
+      color: #258fdb;
+      font-weight: 600;
+    }
+  }
 }
