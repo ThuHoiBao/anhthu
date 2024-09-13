@@ -29,7 +29,7 @@ img {
 button {
   text-align: center;
   color: #fff;
-  background-color: var(--gray);
+  background-color: #125B9A;
   padding: 0.8rem 2.5rem;
   border: none;
   border-radius: 10px;
@@ -293,47 +293,53 @@ header {
 
 /* === Works === */
 #works {
-  top: 0;
-  left: 0;
   padding-top: 1em;
   position: relative;
-  height: 100vh; /* Chiều cao của section bằng 100% chiều cao của viewport */
-  overflow: hidden; /* Đảm bảo không có thanh cuộn */
+  min-height: 100vh;
 }
 
 #works h2 {
   text-align: center;
-  color: var(--gray);
+  color: black;
+  
 }
 
-.works__dec {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateX(-60%);
-  z-index: -1;
-}
-.works__dec:nth-child(2) {
-  position: absolute;
-  top: initial;
-  left: initial;
-  bottom: 15%;
-  right: 0;
-  transform: translateX(60%);
-  z-index: -1;
+.combobox {
+  position: absolute; 
+  top: 100px; 
+  left: 50px; 
+  width: 250px;
+  padding: 10px;
+  font-size: 1rem;
 }
 
-.works__img--single {
-  margin: 2em 0;
+#work-details {
+  position: absolute; 
+  top: 150px; 
+  left: 70px; 
+  text-align: center;
+  margin-top: 20px; 
 }
 
-.works__img--single:nth-child(odd) {
-  padding-top: 5em;
+#work-image {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.works__img--single:nth-child(3) {
-  margin-top: -5em;
+#work-description {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none; /* Xóa gạch chân của liên kết */
 }
+
+#work-description:hover {
+  text-decoration: underline; /* Hiển thị gạch chân khi di chuột qua liên kết */
+}
+
+
 
 
 

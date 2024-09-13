@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- google font -->
+ 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +39,7 @@
         </nav>
       </div>
     </header>
-    <!-- banner -->
+
     <section id="banner">
       <div class="container">
         <!-- img -->
@@ -71,13 +71,25 @@
         <div class="banner__img">
         <img src="./img/things-dec-l.png" alt="illustration of women" />
       </div>
-      <h2 style="color:#3f3d56 ; text-align: left; font-size: 2.5rem; margin-left: 1em;">Weekly Exercises List </h2>
-      <a href="https://emailhostingweb.onrender.com/"><button class="navbar__btn">Murarch</button></a><br><br>
+      
+      <div id="works">
+        <h2 style="color:#010106 ; text-align: left; font-size: 2.5rem; margin-left: 1em;">Weekly Exercises List </h2>
+        <select id="works-combobox" class="combobox">
+          <option value="exer">Exercises</option>
+          <option value="murarch">Murach</option>
+          <option value="Weak 4">Weak 4</option>
+        </select>
+    
+        <div id="work-details">
+          <img id="work-image" src="./img/baitap.jpg" alt="Murarch">
+          <span id="work-description">Exercises</span>
+        </div>
       </div>
+      
     </section>
     <!-- footer -->
     <footer id="footer">
-      <a href="#">
+      <a href="#"> 
         <button style="position: absolute;top:5px;left: 5px;">Home</button><br><br><br><br>
       </a> 
       <div class="container">
@@ -115,6 +127,5 @@
     ></script>
     <!-- main js -->
     <script src="./js/main.js"></script>
-
   </body>
 </html>
