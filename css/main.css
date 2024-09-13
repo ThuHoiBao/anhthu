@@ -214,11 +214,11 @@ header {
 /* Section setup */
 #banner {
   position: relative;
-  height: 100vh; /* Chiều cao của section bằng 100% chiều cao của viewport */
+  height: 100vh; 
   display: flex;
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  overflow: hidden; /* Đảm bảo không có thanh cuộn */
+  align-items: center; 
+  justify-content: center; 
+  overflow: hidden;
 }
 
 /* Banner image container setup */
@@ -302,7 +302,14 @@ header {
   text-align: center;
   color: black;
 }
-
+.ban__img {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  height: 100%; 
+  overflow: hidden;
+  width: 600px; 
+}
 .combobox {
   position: absolute; 
   top: 100px; 
@@ -325,6 +332,7 @@ header {
   height: 300px;
   margin-bottom: 10px;
   border-radius: 5px;
+  top: 100px;
 }
 
 #work-description {
