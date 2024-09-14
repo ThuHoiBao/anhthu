@@ -53,6 +53,10 @@ document.getElementById('works-combobox').addEventListener('change', function() 
     workImage.src = './img/murarch.jpg';
     workDescription.innerHTML = '<a href="https://emailhostingweb.onrender.com/" target="_blank">Murach Survey</a>';
   }
+  else if (selectedValue === 'exer5') {
+    workImage.src = './img/exercise5.png';
+    workDescription.innerHTML = '<a href="https://exercise-5-e0vq.onrender.com" target="_blank">Chapter 5 exercises</a>';
+  }
   else if (selectedValue === 'exer') {
     workImage.src = './img/baitap.jpg';
     workDescription.innerHTML = '<a  target="_blank">Exercises</a>';
