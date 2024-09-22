@@ -47,11 +47,11 @@ document.getElementById('works-combobox').addEventListener('change', function() 
 
   if (selectedValue === 'email') {
     workImage.src = './img/email.jpg';
-    workDescription.innerHTML = '<a href="https://emaillist-ubhj.onrender.com/" target="_blank">Email List</a>';
+    workDescription.innerHTML = '<a href="https://chuong6-1.onrender.com" target="_blank">Email List</a>';
   }
   else if (selectedValue === 'murarch') {
     workImage.src = './img/murarch.jpg';
-    workDescription.innerHTML = '<a href="https://emailhostingweb.onrender.com/" target="_blank">Murach Survey</a>';
+    workDescription.innerHTML = '<a href="https://chuong6-2.onrender.com" target="_blank">Murach Survey</a>';
   }
   else if (selectedValue === 'exer5') {
     workImage.src = './img/exercise5.png';
