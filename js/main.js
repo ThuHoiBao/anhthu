@@ -62,4 +62,8 @@ document.getElementById('works-combobox').addEventListener('change', function() 
     workDescription.innerHTML = '<a  target="_blank">Exercises</a>';
     
   }
+  else if (selectedValue === 'exer7') {
+    workImage.src = './img/cart.jpg';
+    workDescription.innerHTML = '<a href="https://chuong7cart.onrender.com" target="_blank">Shopping Cart</a>';
+  }
 });
