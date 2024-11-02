@@ -65,5 +65,14 @@ document.getElementById('works-combobox').addEventListener('change', function() 
   else if (selectedValue === 'exer7') {
     workImage.src = './img/cart.jpg';
     workDescription.innerHTML = '<a href="https://chuong7cart.onrender.com" target="_blank">Shopping Cart</a>';
+
+  }
+  else if (selectedValue === 'jpa') {
+    workImage.src = './img/jpa.png';
+    workDescription.innerHTML = '<a href="https://jpaemail.onrender.com" target="_blank">Email JPA</a>';
+  }
+  else if (selectedValue === 'sendEmail') {
+    workImage.src = './img/send.jpg';
+    workDescription.innerHTML = '<a href="https://javaemail.onrender.com" target="_blank">Email JPA</a>';
   }
 });
