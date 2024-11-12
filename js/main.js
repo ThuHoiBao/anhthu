@@ -67,6 +67,11 @@ document.getElementById('works-combobox').addEventListener('change', function() 
     workDescription.innerHTML = '<a href="https://chuong7cart.onrender.com" target="_blank">Shopping Cart</a>';
 
   }
+  else if (selectedValue === 'conect') {
+    workImage.src = './img/images.png';
+    workDescription.innerHTML = '<a href="https://connectionpoolemail.onrender.com" target="_blank">Email ConnectionPool</a>';
+
+  }
   else if (selectedValue === 'jpa') {
     workImage.src = './img/jpa.png';
     workDescription.innerHTML = '<a href="https://jpaemail.onrender.com" target="_blank">Email JPA</a>';
