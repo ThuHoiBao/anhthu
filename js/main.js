@@ -67,6 +67,10 @@ document.getElementById('works-combobox').addEventListener('change', function() 
     workDescription.innerHTML = '<a href="https://chuong7cart.onrender.com" target="_blank">Shopping Cart</a>';
 
   }
+  else if (selectedValue === 'sql') {
+    workImage.src = './img/baitap.jpg';
+    workDescription.innerHTML = '<a href="https://sqlgetway.onrender.com" target="_blank">SQL GATE WAY</a>';
+  }
   else if (selectedValue === 'conect') {
     workImage.src = './img/images.png';
     workDescription.innerHTML = '<a href="https://connectionpoolemail.onrender.com" target="_blank">Email ConnectionPool</a>';
